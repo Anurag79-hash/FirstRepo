@@ -21,7 +21,7 @@ public class ProcessDemo {
   public static void openApp() {
     try {
       ProcessBuilder processBuilder = new ProcessBuilder("notepad.exe", "inouts.txt");
-      System.out.println("App opened successfully!");
+    
       Process process = processBuilder.start();
       process.waitFor();
 
@@ -96,6 +96,7 @@ public class ProcessDemo {
       }
       if (content == "") {
         System.out.println("Data not found!");
+        return;
       }
 
       System.out.println("Select mode");
